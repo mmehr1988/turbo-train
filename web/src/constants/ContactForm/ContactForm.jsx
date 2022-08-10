@@ -189,10 +189,8 @@ const ContactForm = (props) => {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode({ 'form-name': 'contact', ...formData }),
       })
-        .then(() => {
-          setErrorCount(0);
-          setSubmitting(true);
-        })
+        .then(() => setErrorCount(0))
+        .then(() => setSubmitting(true))
         .catch((error) => alert(error));
 
       // // IMPORTANT SANITY DO SUBMIT
@@ -281,8 +279,8 @@ const ContactForm = (props) => {
                 className={FORM_CLASSNAME}
                 onSubmit={handleSubmit}
                 {...form}
-                netlify
               >
+                <input type='hidden' name='form-name' value='contact' />
                 <Input
                   isData={isData}
                   handleChange={handleChange}

@@ -81,6 +81,7 @@ const FormInput = (props) => {
 FormInput.defaultProps = {
   LABEL_PROPS: {
     className: 'app__form-label',
+    htmlFor: 'email',
   },
   INPUT_PROPS: {
     className: 'app__form-input',

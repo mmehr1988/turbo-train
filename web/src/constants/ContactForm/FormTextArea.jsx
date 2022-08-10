@@ -74,6 +74,7 @@ const FormTextArea = (props) => {
 FormTextArea.defaultProps = {
   LABEL_PROPS: {
     className: 'app__form-label',
+    htmlFor: 'message',
   },
   TEXT_AREA_PROPS: {
     className: 'app__form-textarea',
