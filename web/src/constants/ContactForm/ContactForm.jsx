@@ -281,6 +281,7 @@ const ContactForm = (props) => {
                 className={FORM_CLASSNAME}
                 onSubmit={handleSubmit}
                 {...form}
+                netlify
               >
                 <Input
                   isData={isData}
