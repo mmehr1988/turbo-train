@@ -14,7 +14,6 @@ import music from './music';
 import musicProject from './musicProject';
 import footer from './footer';
 import externalLinks from './externalLinks';
-import contact from './contact';
 import downloads from './downloads';
 
 export default createSchema({
@@ -32,6 +31,5 @@ export default createSchema({
     music,
     footer,
     externalLinks,
-    contact,
   ]),
 });
