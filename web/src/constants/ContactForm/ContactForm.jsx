@@ -46,12 +46,18 @@ import { validate, validateProperty } from './FormValidator';
 
 import { useOnClickOutside } from '../../hooks';
 
+// =============================================
+// NETLIFY FUNCTION FOR FETCH POST BODY
+// =============================================
 const encode = (data) => {
   return Object.keys(data)
     .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&');
 };
 
+// =============================================
+// LODASH DEBOUNCE = SETTIME but better
+// =============================================
 const debounceCustom = _.debounce((callback) => {
   callback();
 }, 3500);
@@ -181,9 +187,6 @@ const ContactForm = (props) => {
     if (errors) {
       return setErrorCount(errorCount + 1);
     } else {
-      // setErrorCount(0);
-      // setSubmitting(true);
-
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -192,13 +195,6 @@ const ContactForm = (props) => {
         .then(() => setErrorCount(0))
         .then(() => setSubmitting(true))
         .catch((error) => alert(error));
-
-      // // IMPORTANT SANITY DO SUBMIT
-      // sanity.create({
-      //   _type: 'contact',
-      //   email: formData.email,
-      //   message: formData.message,
-      // });
 
       debounceCustom(() => {
         handleReset();
@@ -280,7 +276,13 @@ const ContactForm = (props) => {
                 onSubmit={handleSubmit}
                 {...form}
               >
+                {/* A little help for the Netlify post-processing bots */}
                 <input type='hidden' name='form-name' value='contact' />
+                {/* For extra spam protection via netlify-honeypot */}
+                <div hidden>
+                  <input name='bot-field' />
+                </div>
+
                 <Input
                   isData={isData}
                   handleChange={handleChange}
