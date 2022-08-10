@@ -21,7 +21,11 @@ For the time being, please click on the following [link](https://mmehrabani.com)
 
 1. [Node.js](https://www.npmjs.com/package/inquirer) Packages
 
-   a. [Sanity](https://www.sanity.io/)
+   a. [Joi](https://www.npmjs.com/package/joi-browser)
+
+   a. [React Query](https://react-query-v3.tanstack.com/)
+
+   b. [Sanity](https://www.sanity.io/)
 
 2. CSS Framework
 
