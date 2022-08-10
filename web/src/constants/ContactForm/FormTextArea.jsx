@@ -58,7 +58,6 @@ const FormTextArea = (props) => {
         name={name}
         onChange={handleChange}
         value={isData[name]}
-        type={type}
         {...textarea}
       />
 
@@ -79,7 +78,6 @@ FormTextArea.defaultProps = {
   TEXT_AREA_PROPS: {
     className: 'app__form-textarea',
     name: 'message',
-    type: 'text',
   },
   SPAN_PROPS: {
     tag: 'span',

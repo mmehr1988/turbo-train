@@ -84,8 +84,8 @@ FormInput.defaultProps = {
   },
   INPUT_PROPS: {
     className: 'app__form-input',
+    type: 'email',
     name: 'email',
-    type: 'text',
   },
   SPAN_PROPS: {
     tag: 'span',

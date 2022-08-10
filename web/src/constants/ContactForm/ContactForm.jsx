@@ -20,7 +20,7 @@ import _ from 'lodash';
 // CONTEXT
 // =============================================
 import { ContactContext } from '../../Context';
-import { sanity } from '../../sanity';
+// import { sanity } from '../../sanity';
 
 // =============================================
 // INTERNAL IMPORTS
@@ -45,6 +45,12 @@ import FormButton from './FormButton';
 import { validate, validateProperty } from './FormValidator';
 
 import { useOnClickOutside } from '../../hooks';
+
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+};
 
 const debounceCustom = _.debounce((callback) => {
   callback();
@@ -175,15 +181,26 @@ const ContactForm = (props) => {
     if (errors) {
       return setErrorCount(errorCount + 1);
     } else {
-      setErrorCount(0);
-      setSubmitting(true);
+      // setErrorCount(0);
+      // setSubmitting(true);
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({ 'form-name': 'contact', ...formData }),
+      })
+        .then(() => {
+          setErrorCount(0);
+          setSubmitting(true);
+        })
+        .catch((error) => alert(error));
 
       // // IMPORTANT SANITY DO SUBMIT
-      sanity.create({
-        _type: 'contact',
-        email: formData.email,
-        message: formData.message,
-      });
+      // sanity.create({
+      //   _type: 'contact',
+      //   email: formData.email,
+      //   message: formData.message,
+      // });
 
       debounceCustom(() => {
         handleReset();
@@ -314,6 +331,7 @@ ContactForm.defaultProps = {
   FORM_PROPS: {
     tag: 'form',
     className: 'app__contact-form-form',
+    name: 'contact',
   },
   EMAIL_PROPS: {
     tag: 'div',
