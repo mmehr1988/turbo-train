@@ -20,7 +20,6 @@ import _ from 'lodash';
 // CONTEXT
 // =============================================
 import { ContactContext } from '../../Context';
-// import { sanity } from '../../sanity';
 
 // =============================================
 // INTERNAL IMPORTS
@@ -43,7 +42,6 @@ import FormButton from './FormButton';
 // FORM VALIDATOR
 // =============================================
 import { validate, validateProperty } from './FormValidator';
-
 import { useOnClickOutside } from '../../hooks';
 
 // =============================================
