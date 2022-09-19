@@ -39,6 +39,6 @@ const Article = styled(MotionDiv)`
 
   &.app__page-home {
     padding-top: 0;
-    min-height: calc(100vh - var(--footer-height) * 1.5);
+    min-height: calc(100vh - var(--footer-height) * 2);
   }
 `;
