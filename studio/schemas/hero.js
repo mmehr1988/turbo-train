@@ -10,12 +10,6 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
-      name: 'desc',
-      title: 'Desc',
-      type: 'blockContent',
-      validation: (Rule) => Rule.required(),
-    },
-    {
       name: 'image',
       title: 'Image',
       type: 'image',

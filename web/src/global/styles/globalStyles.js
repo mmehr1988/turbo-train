@@ -37,21 +37,19 @@ export const GlobalStyles = createGlobalStyle`
         /* BRAND COLORS */
         /* =========================================== */
 
-        --bg-primary: hsl(0, 0%, 100%); // white
+        --bg-primary: hsl(0 0% 100%); // white
         --bg-secondary: hsl(228 89% 0%); // black
 
-        --text-primary: hsl(0, 0%, 13%); // black
+        --text-primary: hsl(0 0% 13%); // black
         --text-secondary: hsl(228 89% 100%); // white
 
-        --color-1: hsl(8, 78%, 49%); // RED
-        --color-2: hsl(218, 8%, 39%); // GREY DARK
-        --color-2-dark: hsl(215, 16%, 23%); // GREY DARKER
-        --color-2-light: hsl(223, 5%, 70%); // GREY LIGHT
-        --color-2-lighter: hsl(220, 4%, 85%); // GREY LIGHTER
-        --color-3: hsl(200, 40%, 32%);
+        --color-1: hsl(264 52% 34%); // RED
+        --color-2: hsl(200 18% 26%); // GREY DARK
+        --color-2-dark: hsl(215 16% 23%); // GREY DARKER
+        --color-2-light: hsl(223 5% 70%); // GREY LIGHT
+        --color-2-lighter: hsl(220 4% 85%); // GREY LIGHTER
+        --color-3: hsl(200 40% 32%);
 
-        /* --nav-bg-color: hsla(0, 0%, 98.82352941176471%, 0.85); */
-        --nav-bg-color: hsla(0, 0%, 98.82352941176471%, 1);
         --border-1: 3px solid var(--color-2-lighter);
 
         --outline-style: 2px solid var(--color-2);
