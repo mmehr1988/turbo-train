@@ -191,7 +191,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     h1 {
-        font-size: clamp(4rem, 2.8857rem + 4.5714vw, 7rem);
+        font-size: clamp(4rem, 2.8857rem + 4.5714vw, 6rem);
         /* IMPORTANT: Safari has issues with font-size clamp. To fix the issue,
             provide a min-height */
         min-height: 0vw;
