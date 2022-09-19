@@ -41,4 +41,10 @@ const Article = styled(MotionDiv)`
     padding-top: 0;
     min-height: calc(100vh - var(--footer-height) * 2);
   }
+
+  @media only screen and (max-device-width: 499px) {
+    &.app__page-home {
+      min-height: calc(100vh - var(--footer-height) * 2.25);
+    }
+  }
 `;

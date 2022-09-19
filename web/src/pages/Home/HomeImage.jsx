@@ -41,7 +41,7 @@ HomeImage.defaultProps = {
     alt: 'Saint Abdullah performing at the shed',
     aspect: 2 / 1,
     w: '100vw',
-    minH: '100vh',
+    minH: '100%',
     pos: 'fixed',
     top: '0px',
     left: '0px',

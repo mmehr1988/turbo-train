@@ -52,8 +52,6 @@ const Footer = (props) => {
 
   const keysToPick = ['link', 'title'];
 
-  console.log(props);
-
   return (
     <motion.div
       key={`${containerClassName}-${idName}-${motionKey}`}
