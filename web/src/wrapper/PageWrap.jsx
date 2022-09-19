@@ -3,6 +3,7 @@
 // ==========================================
 
 import React, { useRef, createRef, useMemo } from 'react';
+import styled from 'styled-components';
 import { AnimatePresence, motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 
@@ -27,7 +28,7 @@ const PageWrap = (Component, idName) =>
     return useMemo(() => {
       return (
         <AnimatePresence initial={isLoading ? true : false}>
-          <motion.div
+          <Wrapper
             className={`app__page-wrap page-wrap-${idName}`}
             key={`app__page-wrap`}
             initial={{ opacity: 0 }}
@@ -47,7 +48,7 @@ const PageWrap = (Component, idName) =>
                 <Footer idName={idName} />
               </>
             )}
-          </motion.div>
+          </Wrapper>
         </AnimatePresence>
       );
     }, [data, isLoading, isError, error]);
@@ -58,3 +59,5 @@ PageWrap.propTypes = {
 };
 
 export default PageWrap;
+
+const Wrapper = styled(motion.div)``;

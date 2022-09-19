@@ -13,10 +13,9 @@ const HomeText = (props) => {
   // ==========================================
   const homeTextContainerRef = useRef(createRef());
   const homeTextHeader = useRef(createRef());
-  // const homeSubHeader = useRef(createRef());
 
   return (
-    <MotionDiv ref={homeTextContainerRef} {...rest}>
+    <Section ref={homeTextContainerRef} {...rest}>
       <Article ref={homeTextHeader} className='app__hero-header' tag='article'>
         {title && (
           <SanityBlockContent
@@ -25,30 +24,24 @@ const HomeText = (props) => {
           />
         )}
       </Article>
-    </MotionDiv>
+    </Section>
   );
 };
 
 HomeText.defaultProps = {
   className: 'app__hero-text-container',
   tag: 'section',
-  pos: 'fixed',
-  top: '45%',
-  left: '50%',
-  w: '100%',
-  transform: 'translate(-50%, -50%)',
-  d: 'flex',
-  flexDir: 'column',
-  align: 'center',
-  justify: 'center',
-  gap: '4rem',
-  textAlign: 'center',
 };
 
 export default HomeText;
 
+const Section = styled(MotionDiv)`
+  z-index: 1;
+`;
+
 const Article = styled(MotionDiv)`
   &.app__hero-header {
+    text-align: center;
     text-shadow: ${({ theme }) => theme.textShadow.shadow1};
     strong {
       color: var(--color-2);

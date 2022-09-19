@@ -1,17 +1,21 @@
 import { forwardRef } from 'react';
+import styled from 'styled-components';
+
 import { MotionDiv } from '../../components';
 
 const PageWrapper = forwardRef((props, ref) => {
   const { children, className, ...rest } = props;
 
   return (
-    <MotionDiv
-      ref={ref}
-      className={`app__page-container ${className}`}
-      {...rest}
-    >
-      {children}
-    </MotionDiv>
+    <>
+      <Article
+        ref={ref}
+        className={`app__page-container ${className}`}
+        {...rest}
+      >
+        {children}
+      </Article>
+    </>
   );
 });
 
@@ -20,12 +24,21 @@ PageWrapper.defaultProps = {
   d: 'flex',
   flexDir: 'column',
   align: 'center',
-  justify: 'flex-start',
+  justify: 'center',
   flexGrow: '1',
   maxW: '1440px',
   w: '100%',
   gap: { minXS: '2rem', minSM: '3rem' },
-  m: { t: { minMD: '10rem', maxMD: '8rem' } },
+  p: { t: { maxMD: '7rem' } },
 };
 
 export default PageWrapper;
+
+const Article = styled(MotionDiv)`
+  padding-top: 7rem;
+
+  &.app__page-home {
+    padding-top: 0;
+    min-height: calc(100vh - var(--footer-height) * 1.5);
+  }
+`;

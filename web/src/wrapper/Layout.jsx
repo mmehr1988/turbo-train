@@ -48,10 +48,6 @@ Layout.defaultProps = {
     tag: 'div',
     className: 'app__layout-wrapper',
     pos: 'relative',
-    w: '100%',
-    h: '100vh',
-    d: 'grid',
-    gridTempCols: '1fr auto',
     m: '0 auto',
   },
 };

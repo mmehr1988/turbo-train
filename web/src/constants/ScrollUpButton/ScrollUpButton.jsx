@@ -57,7 +57,7 @@ const ScrollUpButton = (props) => {
 
   const marginStyles = {
     r: marginCalc,
-    b: `calc(${theme.mainPadding} + 1.25rem)`,
+    b: `calc(var(--footer-height) / 2)`,
   };
 
   return (

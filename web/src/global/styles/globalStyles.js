@@ -31,7 +31,7 @@ export const GlobalStyles = createGlobalStyle`
         /* ============================================================= */
 
         --max-width: 1440px;
-        --footer-height: 120px;
+        --footer-height: 100px;
         
         /* =========================================== */
         /* BRAND COLORS */
@@ -191,7 +191,10 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     h1 {
-        font-size: clamp(4rem, 2.8857rem + 4.5714vw, 6rem);
+        font-size: clamp(3.625rem, 2.9342rem + 3.6842vw, 6.25rem);
+        /* font-size: clamp(4rem, 2.8857rem + 4.5714vw, 6rem); */
+        /* font-size: 7rem; */
+        /* font-size: clamp(4rem, 1.8571rem + 5.7143vw, 7rem); */
         /* IMPORTANT: Safari has issues with font-size clamp. To fix the issue,
             provide a min-height */
         min-height: 0vw;

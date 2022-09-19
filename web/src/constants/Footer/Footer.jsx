@@ -52,6 +52,8 @@ const Footer = (props) => {
 
   const keysToPick = ['link', 'title'];
 
+  console.log(props);
+
   return (
     <motion.div
       key={`${containerClassName}-${idName}-${motionKey}`}
@@ -114,28 +116,15 @@ const FooterContainer = styled(FlexContainer)`
   gap: 0.5rem;
 
   height: var(--footer-height);
-  margin-top: 5rem;
+  margin-top: 4rem;
 
   p {
     font-size: var(--font-size-2);
     font-weight: 300;
     color: var(--color-2);
   }
-  /* 
-      The footer is placed inside the PageWrap HOC.
-      Since the home page is styled with absolute position,
-      The styling of the footer for this page needs to also be absolute
-      as to not create layout shift.
-     */
 
-  &.app__footer {
-    &.page-hero {
-      position: absolute;
-      bottom: 0%;
-      left: 50%;
-      transform: translateX(-50%);
-      max-width: ${({ theme }) => theme.maxWidth};
-      width: 100%;
-    }
+  &.page-hero {
+    margin-top: 0rem;
   }
 `;
