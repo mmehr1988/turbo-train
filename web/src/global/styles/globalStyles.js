@@ -183,6 +183,7 @@ export const GlobalStyles = createGlobalStyle`
         color: var(--text-primary);
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        overflow:scroll;
     }
 
 
@@ -350,7 +351,8 @@ export const GlobalStyles = createGlobalStyle`
     /* visibility: hidden; */
     }
 
-    .scroll-hidden {
+    body.scroll-hidden {
+        height: 100%;
         overflow: hidden;
     }
 `;
