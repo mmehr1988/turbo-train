@@ -172,6 +172,7 @@ export const GlobalStyles = createGlobalStyle`
     html {
         block-size: 100%;
         scroll-behavior: smooth;
+        height: -webkit-fill-available;
     }
 
     body {
@@ -183,7 +184,8 @@ export const GlobalStyles = createGlobalStyle`
         color: var(--text-primary);
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        overflow:scroll;
+        height: 100vh;
+        height: -webkit-fill-available;
     }
 
 
@@ -273,10 +275,6 @@ export const GlobalStyles = createGlobalStyle`
         }
     }
 
-    /* strong {
-        pointer-events: none;
-    } */
-
     /* =================================================================== */
     /* REUSABLE CLASSES */
     /* =================================================================== */
@@ -352,7 +350,6 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     body.scroll-hidden {
-        height: 100%;
         overflow: hidden;
     }
 `;
