@@ -43,8 +43,5 @@ const Article = styled(MotionDiv)`
   &.app__hero-header {
     text-align: center;
     text-shadow: ${({ theme }) => theme.textShadow.shadow1};
-    strong {
-      color: var(--color-2);
-    }
   }
 `;
