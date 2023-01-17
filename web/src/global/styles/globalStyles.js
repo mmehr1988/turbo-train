@@ -43,8 +43,10 @@ export const GlobalStyles = createGlobalStyle`
         --text-primary: hsl(0 0% 13%); // black
         --text-secondary: hsl(228 89% 100%); // white
 
-        --color-1: hsl(264 52% 34%); // PURPLE
-        --color-2: hsl(200 18% 26%); // GREY DARK
+        /* --color-1: hsl(264 52% 34%); // PURPLE
+        --color-2: hsl(200 18% 26%); // GREY DARK */
+        --color-1: hsl(8 78% 49%); // NASA RED
+        --color-2: hsl(218 8% 39%); // GREY DARK        
         --color-2-dark: hsl(215 16% 23%); // GREY DARKER
         --color-2-light: hsl(223 5% 70%); // GREY LIGHT
         --color-2-lighter: hsl(220 4% 85%); // GREY LIGHTER
@@ -202,7 +204,7 @@ export const GlobalStyles = createGlobalStyle`
             provide a min-height */
         min-height: 0vw;
         max-inline-size: var(--size-header-1); 
-        color: var(--color-1);
+        color: var(--color-2);
     }
 
     h2 {

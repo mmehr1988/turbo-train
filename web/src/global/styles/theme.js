@@ -8,8 +8,8 @@ export const lightTheme = {
     bgSecondary: `hsl(228 89% 0%)`, // BLACK
     textPrimary: `hsl(0, 0%, 13%)`,
     textSecondary: `hsl(228 89% 100%)`,
-    color1: `hsl(264 52% 34%)`,
-    color2: `hsl(200 18% 26%)`,
+    color1: `hsl(8 78% 49%)`,
+    color2: `hsl(218 8% 39%)`,
     color2dark: `hsl(215, 16%, 23%)`,
     color2light: `hsl(223, 5%, 70%)`,
     color2lighter: `hsl(220, 4%, 85%)`,

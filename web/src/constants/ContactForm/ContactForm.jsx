@@ -266,7 +266,7 @@ const ContactForm = (props) => {
               initial={false}
               animate={shake ? 'start' : 'reset'}
               whileHover={{
-                borderColor: theme.colors.color1,
+                borderColor: theme.colors.color2,
               }}
             >
               <Form
@@ -306,7 +306,7 @@ const ContactForm = (props) => {
               className={EMAIL_CLASSNAME}
               {...email}
               whileHover={{
-                borderColor: theme.colors.color1,
+                borderColor: theme.colors.color2,
               }}
             >
               tatash.my@gmail.com
@@ -346,7 +346,7 @@ const FormVariables = css`
   /* ======================================= */
   --F_color1: ${({ theme }) => theme.colors.color1};
   --F_color2: ${({ theme }) => theme.colors.color2};
-  --F_color2Lighter: ${({ theme }) => theme.colors.color2lighter};
+  --F_color2Lighter: ${({ theme }) => theme.colors.color1};
   --F_color2Lightest: ${({ theme }) => theme.colors.color2lightest};
   --F_bgPrimary: ${({ theme }) => theme.colors.bgPrimary};
   --F_roundedMD: ${({ theme }) => theme.rounded.md};
@@ -361,7 +361,7 @@ const FormVariables = css`
   --C_maxWidth: 375px;
   --C_padding: 1.25rem;
   --C_borderWidth: 3px;
-  --C_border: var(--C_borderWidth) solid var(--F_color2Lighter);
+  --C_border: var(--C_borderWidth) solid var(--color-1);
 
   /* ======================================= */
   /* Form */
